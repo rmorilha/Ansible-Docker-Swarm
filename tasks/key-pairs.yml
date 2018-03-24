@@ -1,8 +1,0 @@
-- name: "Keys Generation"
-  hosts: 
-   - local
-
-  tasks:
-
-   - name: "Generating Key-Pairs to Connect on Hosts"
-     command: ssh-keygen -b 4096 -t rsa -N '' -C swarm -f ../key-pairs/swarm.pem
