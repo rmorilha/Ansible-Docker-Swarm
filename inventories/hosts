@@ -1,0 +1,32 @@
+[docker-ce]
+# managers
+10.0.7.220
+10.0.7.222
+10.0.8.221
+
+# workers
+10.0.9.220
+10.0.9.222
+10.0.10.221
+
+[swarm-master]
+10.0.7.220
+
+[swarm-manager]
+10.0.7.222
+10.0.8.221
+
+[swarm-worker]
+10.0.9.220
+10.0.9.222
+10.0.10.221
+
+[all:children]
+docker-ce
+swarm-master
+swarm-manager
+swarm-worker
+
+[all:vars]
+ansible_ssh_user=ubuntu
+ansible_ssh_private_key_file=/home/ubuntu/swarm.pem

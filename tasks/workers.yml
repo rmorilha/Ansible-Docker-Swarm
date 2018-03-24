@@ -1,0 +1,9 @@
+- name: "Workers Update"
+  hosts: 
+   - all
+  become: yes
+
+  tasks:
+
+   - name: Update repositories cache and install "python" package
+     command: "sudo apt install python-minimal -y"

@@ -1,0 +1,10 @@
+---
+
+- include: tasks/workers.yml
+  tags: workers
+
+- include: tasks/docker-ce.yml
+  tags: docker-ce
+  
+- include: tasks/swarm.yml
+  tags: swarm
